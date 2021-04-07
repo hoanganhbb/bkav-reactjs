@@ -32,14 +32,17 @@ export default function App() {
   return (
     <AppWrapper>
       <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
+        titleTemplate="%s - Products - Naturally"
+        defaultTitle="Products - Naturally"
       >
-        <meta name="description" content="A React.js Boilerplate application" />
+        <meta name="description" content="Products - Naturally" />
       </Helmet>
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route path="/pages" component={HomePage} />
+        <Route path="/shop" component={HomePage} />
+        <Route path="/blog" component={HomePage} />
         <Route path="/features" component={FeaturePage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
