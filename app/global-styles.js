@@ -22,10 +22,20 @@ const GlobalStyle = createGlobalStyle`
     min-width: 100%;
   }
 
-  p,
-  label {
+  p, label {
     font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
+    margin: 0;
+    color: ##919c93;
+
+  }
+  h1 {
+    margin: 0;
+  }
+  .container {
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
