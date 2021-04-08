@@ -21,6 +21,8 @@ import Button from '../../components/Button';
 import GlobalStyle from '../../global-styles';
 import ListItem from '../../components/ListItem';
 
+import { Wrapper, WrapperList, WrapperFilter } from './Wrapper';
+
 const AppWrapper = styled.div`
   max-width: 100%;
   margin: 0 auto;
@@ -50,7 +52,12 @@ export default function App() {
       </Helmet>
       <Header />
       <Button onClick={onChangeTheme}>Theme</Button>
-      <ListItem theme={theme} />
+      <Wrapper>
+        <WrapperFilter>Filter by price</WrapperFilter>
+        <WrapperList>
+          <ListItem theme={theme} />
+        </WrapperList>
+      </Wrapper>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/pages" component={HomePage} />
