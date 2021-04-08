@@ -6,7 +6,7 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
@@ -17,9 +17,7 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import ArrowStyle from 'components/ArrowStyle';
 import Footer from 'components/Footer';
-import Button from '../../components/Button';
 import GlobalStyle from '../../global-styles';
-import ListItem from '../../components/ListItem';
 
 const AppWrapper = styled.div`
   max-width: 100%;
@@ -30,16 +28,6 @@ const AppWrapper = styled.div`
 `;
 
 export default function App() {
-  const [theme, setTheme] = useState('grid');
-
-  const onChangeTheme = () => {
-    if (theme === 'grid') {
-      setTheme('list');
-    } else {
-      setTheme('grid');
-    }
-  };
-
   return (
     <AppWrapper>
       <Helmet
@@ -49,8 +37,6 @@ export default function App() {
         <meta name="description" content="Products - Naturally" />
       </Helmet>
       <Header />
-      <Button onClick={onChangeTheme}>Theme</Button>
-      <ListItem theme={theme} />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/pages" component={HomePage} />
