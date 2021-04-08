@@ -12,6 +12,18 @@ export default defineMessages({
     id: `${scope}.home`,
     defaultMessage: 'Home',
   },
+  pages: {
+    id: `${scope}.pages`,
+    defaultMessage: 'Pages',
+  },
+  shop: {
+    id: `${scope}.shop`,
+    defaultMessage: 'Shop',
+  },
+  blog: {
+    id: `${scope}.Blog`,
+    defaultMessage: 'Blog',
+  },
   features: {
     id: `${scope}.features`,
     defaultMessage: 'Features',
