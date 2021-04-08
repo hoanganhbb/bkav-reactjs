@@ -6,7 +6,7 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
@@ -16,8 +16,9 @@ import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-
+import Button from '../../components/Button';
 import GlobalStyle from '../../global-styles';
+import ListItem from '../../components/ListItem';
 
 const AppWrapper = styled.div`
   max-width: calc(768px + 16px * 2);
@@ -29,6 +30,16 @@ const AppWrapper = styled.div`
 `;
 
 export default function App() {
+  const [theme, setTheme] = useState('grid');
+
+  const onChangeTheme = () => {
+    if (theme === 'grid') {
+      setTheme('list');
+    } else {
+      setTheme('grid');
+    }
+  };
+
   return (
     <AppWrapper>
       <Helmet
@@ -38,6 +49,8 @@ export default function App() {
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
       <Header />
+      <Button onClick={onChangeTheme}>Theme</Button>
+      <ListItem theme={theme} />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/features" component={FeaturePage} />

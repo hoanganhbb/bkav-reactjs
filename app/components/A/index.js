@@ -1,15 +1,24 @@
-/**
- * A link to a certain page, an anchor tag
- */
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import styled from 'styled-components';
+import AStyled from './AStyled';
 
-const A = styled.a`
-  color: #41addd;
+function A({ text, icon, title }) {
+  return text ? (
+    <AStyled className="text-link">
+      <span>{text}</span>
+    </AStyled>
+  ) : (
+    <AStyled className={icon ? 'icon-link' : 'title-link'}>
+      <span>{icon || title}</span>
+    </AStyled>
+  );
+}
 
-  &:hover {
-    color: #6cc0e5;
-  }
-`;
+A.propTypes = {
+  text: PropTypes.string,
+  icon: PropTypes.node,
+  title: PropTypes.string,
+};
 
 export default A;

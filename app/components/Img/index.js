@@ -7,9 +7,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import ImgStyled from './ImgStyled';
 
 function Img(props) {
-  return <img className={props.className} src={props.src} alt={props.alt} />;
+  return (
+    <ImgStyled className={props.className} src={props.src} alt={props.alt} />
+  );
 }
 
 // We require the use of src and alt, only enforced by react in dev mode
