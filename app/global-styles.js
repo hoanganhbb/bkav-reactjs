@@ -36,6 +36,8 @@ const GlobalStyle = createGlobalStyle`
     max-width: 1220px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 `;
 

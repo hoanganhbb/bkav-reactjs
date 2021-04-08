@@ -4,9 +4,6 @@ const HeaderMain = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 1220px;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 18px;
