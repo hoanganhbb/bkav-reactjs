@@ -20,12 +20,12 @@ const ArrowStyle = () => {
   window.addEventListener('scroll', checkScrollTop);
 
   return (
-    <ArrowFooter>
-      <div
-        className="arrow-style"
-        style={{ display: showScroll ? 'flex' : 'none' }}
-      >
-        <ArrowUp size={30} onClick={scrollTop} />
+    <ArrowFooter
+      style={{ display: showScroll ? 'flex' : 'none' }}
+      onClick={scrollTop}
+    >
+      <div className="arrow-style">
+        <ArrowUp size={30} />
       </div>
     </ArrowFooter>
   );
