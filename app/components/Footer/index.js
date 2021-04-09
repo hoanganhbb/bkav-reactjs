@@ -8,6 +8,7 @@ import {
 } from 'react-bootstrap-icons';
 import learnRectjsLogo from 'images/learnRectjsLogo.png';
 import Wrapper from './Wrapper';
+import Astyle from './Astyle';
 import LayoutFooter from './LayoutFooter';
 import Img from '../Img';
 
@@ -81,16 +82,40 @@ function Footer() {
             <div className="ColorFontTitle">Follow us</div>
             <div className="social-style">
               <div className="space-social-style">
-                <Facebook size={30} />
+                <Astyle
+                  className="style-a"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
+                  <Facebook size={30} />
+                </Astyle>
               </div>
               <div className="space-social-style">
-                <Instagram size={30} />
+                <Astyle
+                  className="style-a"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                >
+                  <Instagram size={30} />
+                </Astyle>
               </div>
               <div className="space-social-style">
-                <Twitter size={30} />
+                <Astyle
+                  className="style-a"
+                  href="https://twitter.com/"
+                  target="_blank"
+                >
+                  <Twitter size={30} />
+                </Astyle>
               </div>
               <div className="space-social-style">
-                <Youtube size={30} />
+                <Astyle
+                  className="style-a"
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                >
+                  <Youtube size={30} />
+                </Astyle>
               </div>
             </div>
           </div>
