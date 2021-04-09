@@ -95,7 +95,6 @@ export function HomePage() {
             </div>
           </CenteredSection>
         </Section>
-
         <Section>
           <CenteredSection>
             <div className="container">
@@ -130,7 +129,7 @@ export function HomePage() {
                       className="product-thumbnail"
                     />
                     <p className="product-lable">Csherry</p>
-                    <p className="product-lable">$ 1000</p>
+                    <p className="product-lable">10 Products</p>
                   </div>
                   <div className="product">
                     <img
@@ -139,7 +138,7 @@ export function HomePage() {
                       className="product-thumbnail"
                     />
                     <p className="product-lable">Carot</p>
-                    <p className="product-lable">$ 2000</p>
+                    <p className="product-lable">5 Products</p>
                   </div>
                   <div className="product">
                     <img
@@ -148,7 +147,7 @@ export function HomePage() {
                       className="product-thumbnail"
                     />
                     <p className="product-lable">Banana</p>
-                    <p className="product-lable">$ 4000</p>
+                    <p className="product-lable">6 Products</p>
                   </div>
                   <div className="product">
                     <img
@@ -157,7 +156,7 @@ export function HomePage() {
                       className="product-thumbnail"
                     />
                     <p className="product-lable">Apple</p>
-                    <p className="product-lable">$ 5000</p>
+                    <p className="product-lable">8 Products</p>
                   </div>
                   <div className="product">
                     <img
@@ -166,7 +165,7 @@ export function HomePage() {
                       className="product-thumbnail"
                     />
                     <p className="product-lable">Nho</p>
-                    <p className="product-lable">$ 1200</p>
+                    <p className="product-lable">8 Products</p>
                   </div>
                 </Carousel>
               </div>
