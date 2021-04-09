@@ -18,6 +18,21 @@ const ArrowFooter = styled.div`
     background: #babda5;
     border-radius: 15%;
     color: white;
+    cursor: pointer;
+  }
+
+  .arrow-style:hover {
+    opacity: 1;
+    background: #364a15;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
   }
 `;
 
