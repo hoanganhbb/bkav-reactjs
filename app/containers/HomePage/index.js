@@ -4,7 +4,7 @@
  * This is the first thing users see of our App, at the '/' route
  */
 
-import React, { memo, useState } from 'react';
+import React, { memo, useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
@@ -35,9 +35,10 @@ import Product2 from './images/product2.jpg';
 import Product3 from './images/product3.jpg';
 import Product4 from './images/product4.jpg';
 import Product5 from './images/product5.jpg';
-import { Wrapper, WrapperFilter, WrapperList } from './Wrapper';
+import { WrapperList } from './WrapperList';
 import ListItem from '../../components/ListItem';
 import Button from '../../components/Button';
+import FilterItem from '../../components/FilterItem';
 
 const key = 'home';
 
@@ -173,12 +174,14 @@ export function HomePage() {
           </CenteredSection>
         </Section>
         <Button onClick={onChangeTheme}>Theme</Button>
-        <Wrapper>
-          <WrapperFilter>Filter by price</WrapperFilter>
-          <WrapperList>
+        <WrapperList>
+          <Fragment>
+            <FilterItem />
+          </Fragment>
+          <Fragment>
             <ListItem theme={theme} />
-          </WrapperList>
-        </Wrapper>
+          </Fragment>
+        </WrapperList>
       </div>
     </article>
   );

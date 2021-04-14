@@ -23,6 +23,7 @@ const AStyled = styled.a`
   }
 
   &.title-link {
+    color: #364a15;
     cursor: pointer;
   }
 `;

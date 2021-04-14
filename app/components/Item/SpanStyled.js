@@ -12,6 +12,9 @@ const SpanStyled = styled.span`
     text-decoration: line-through;
     margin-right: 20px;
   }
+  &.font-14 {
+    font-size: 14px;
+  }
 `;
 
 export default SpanStyled;

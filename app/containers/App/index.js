@@ -18,6 +18,7 @@ import Header from 'components/Header';
 import ArrowStyle from 'components/ArrowStyle';
 import Footer from 'components/Footer';
 import GlobalStyle from '../../global-styles';
+import DetailPage from '../DetailPage';
 
 const AppWrapper = styled.div`
   max-width: 100%;
@@ -39,7 +40,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/pages" component={HomePage} />
+        <Route path="/detail" component={DetailPage} />
         <Route path="/shop" component={HomePage} />
         <Route path="/blog" component={HomePage} />
         <Route path="/features" component={FeaturePage} />

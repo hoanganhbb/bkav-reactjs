@@ -25,7 +25,7 @@ function ItemList() {
   const price = 14.44;
   const discount = 12.44;
   return (
-    <Wrapper>
+    <Wrapper className="list" href="/detail">
       <WrapperItem className="list">
         <WrapperImg>
           <Img src={Apple} alt="Apple" />
