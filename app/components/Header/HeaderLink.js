@@ -22,40 +22,37 @@ export default styled(Link)`
 
   .dropbtn {
     color: #618626;
-    background-color: #fff;
     padding: 10px;
     border: none;
+    background: none;
+    border-radius: 15%;
   }
-  
+
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
-    // background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-  
+
   .dropdown-content a {
-    // color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
-  
-  .dropdown-content a:hover {background-color: #fff;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #fff;
-    border-top: 1px solid  #919c93;
-    border-left: 1px solid  #919c93;
-    border-right: 1px solid  #919c93;
-    border-bottom: none;
-    border-radius:  10px 10px 0 0;}
+
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius : 10%;
+    border-bottom-right-radius : 10%;
+  }
+
 `;

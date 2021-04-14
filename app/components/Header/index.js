@@ -2,14 +2,11 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import LocaleToggle from 'containers/LocaleToggle';
 import { Headset, Search, People, Bag, Globe } from 'react-bootstrap-icons';
-
 import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
 import HeaderMain from './HeaderMain';
-
 import Logo from './logo.png';
 import messages from './messages';
-import A from '../A';
 
 function Header() {
   return (
@@ -48,13 +45,13 @@ function Header() {
             </div>
           </div>
           <div className="header_bottom">
-            <A href="https://ninetheme.com/themes/naturally/shop/#0">
+            <a href="https://ninetheme.com/themes/naturally/shop/#0">
               <img
                 src={Logo}
                 alt="react-boilerplate - Logo"
                 className="logo-header"
               />
-            </A>
+            </a>
             <NavBar>
               <HeaderLink to="/">
                 <div className="dropdown">
@@ -81,21 +78,64 @@ function Header() {
                 </div>
               </HeaderLink>
               <HeaderLink to="/shop">
-                <FormattedMessage {...messages.shop} />
+                <div className="dropdown">
+                  <button type="button" className="dropbtn">
+                    <FormattedMessage {...messages.shop} />
+                  </button>
+                  <div className="dropdown-content">
+                    <a href>Link 1</a>
+                    <a href>Link 2</a>
+                    <a href>Link 3</a>
+                  </div>
+                </div>
               </HeaderLink>
               <HeaderLink to="/blog">
-                <FormattedMessage {...messages.blog} />
+                <div className="dropdown">
+                  <button type="button" className="dropbtn">
+                    <FormattedMessage {...messages.blog} />
+                  </button>
+                  <div className="dropdown-content">
+                    <a href>Link 1</a>
+                    <a href>Link 2</a>
+                    <a href>Link 3</a>
+                  </div>
+                </div>
               </HeaderLink>
               <HeaderLink to="/features">
-                <FormattedMessage {...messages.features} />
+                <div className="dropdown">
+                  <button type="button" className="dropbtn">
+                    <FormattedMessage {...messages.features} />
+                  </button>
+                  <div className="dropdown-content">
+                    <a href>Link 1</a>
+                    <a href>Link 2</a>
+                    <a href>Link 3</a>
+                  </div>
+                </div>
               </HeaderLink>
             </NavBar>
-            <div className="header-cart">
+            <div className="dropdown header-cart">
               <div className="header-cart-label">
                 <span className="icon">
                   <Bag />
                 </span>
-                <span className="header_cart_label_text">$ 00.00/ 0 items</span>
+                <span className="header_cart_label_text">
+                  $ 00.00 / 0 items
+                </span>
+              </div>
+              <div className="dropdown-cart">
+                <div className="style-cart">
+                  <p className="color-green">Your Cart</p>
+                  <p>No products in the cart.</p>
+                  <div className="style-button-cart">
+                    <button className="btn-cart" type="submit">
+                      Start Shopping
+                    </button>
+                    <button className="btn-cart" type="submit">
+                      Return Policy
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
