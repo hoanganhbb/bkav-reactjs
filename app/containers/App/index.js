@@ -10,11 +10,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
+import HeartStyle from 'components/HeartStyle';
 import ArrowStyle from 'components/ArrowStyle';
 import Footer from 'components/Footer';
 import GlobalStyle from '../../global-styles';
@@ -47,6 +47,7 @@ export default function App() {
         <Route path="" component={NotFoundPage} />
       </Switch>
       <Footer />
+      <HeartStyle />
       <ArrowStyle />
       <GlobalStyle />
     </AppWrapper>
