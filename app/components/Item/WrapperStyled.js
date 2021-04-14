@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
   padding: 0 20px;
   margin-bottom: 40px;
+  text-decoration: none;
+
+  &.list {
+    display: block;
+  }
 `;
 
 const WrapperItem = styled.div`

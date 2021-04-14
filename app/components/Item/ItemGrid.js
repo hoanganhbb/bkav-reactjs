@@ -24,8 +24,10 @@ function ItemGrid() {
   const rate = 3;
   const price = 14.44;
   const discount = 12.44;
+
+  const onAddCart = () => {};
   return (
-    <Wrapper>
+    <Wrapper className="grid" href="/detail">
       <WrapperItem className="grid">
         <Img src={Apple} alt="Apple" />
         <WrapperTag className="grid">
@@ -41,7 +43,10 @@ function ItemGrid() {
         </WrapperContent>
         <WrapperContent>
           {array.map(item => (
-            <StarFill style={{ color: item <= rate ? '#fab300' : '#919c93' }} />
+            <StarFill
+              key={item}
+              style={{ color: item <= rate ? '#fab300' : '#919c93' }}
+            />
           ))}
         </WrapperContent>
         <WrapperContent className="price">
@@ -49,7 +54,7 @@ function ItemGrid() {
           <SpanStyled className="discount">${discount}</SpanStyled>
         </WrapperContent>
         <WrapperContent className="action">
-          <WrapperContent className="item">
+          <WrapperContent onClick={onAddCart} className="item">
             <Cart3 />
           </WrapperContent>
           <WrapperContent className="item">
